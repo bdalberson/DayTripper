@@ -30,11 +30,14 @@ function pressclicked(){
 
 $(containterLister.on('click','.btn',pressclicked ))
 
-past = dayjs().isBefore(dayjs(today))
+past = dayjs().isBefore(dayjs(today, 'hour'))
 
 console.log(past)
 
-present = dayjs().isSame('2011-01-01', 'year')
+present = dayjs().isSame(today, 'hour')
+
+console.log(present)
+
 
 future = dayjs().isAfter(today, 'hour')
 
