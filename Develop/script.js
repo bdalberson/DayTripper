@@ -43,6 +43,7 @@ $(nineHourListener.on('click','.btn',function(event){
   var nineAM = dayjs().set('hour', 09).format("HH")
   if (currentHour > nineAM){
     console.log("past");
+    document.getElementById("hour-9").classList.add('future');
   }
   else{
     console.log("future");
