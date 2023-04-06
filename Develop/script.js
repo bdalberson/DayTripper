@@ -21,6 +21,9 @@ $(function () {
 });
 
 var today = dayjs().format('MMM D, YYYY')
+var currentHour = dayjs().format("hh")
+console.log(currentHour)
+
 
 document.title = today
 var nineHourListener = $("#hour-9")
@@ -37,8 +40,51 @@ var fiveHourListener = $("#hour-5")
 
 
 $(nineHourListener.on('click','.btn',function(event){
-  console.log("9")
+  var nineAM = dayjs().set('hour', 9)
+  console.log(nineAM.format("hh"))
+
 }))
+
+$(tenHourListener.on('click','.btn',function(event){
+  var tenAM = dayjs().set('hour', 10)
+  console.log(tenAM.format("hh"))
+}))
+
+$(elevenHourListener.on('click','.btn',function(event){
+  var elevenAM = dayjs().set('hour', 11)
+  console.log(elevenAM.format("hh"))
+}))
+
+$(noonHourListener.on('click','.btn',function(event){
+  var noonAM = dayjs().set('hour', 12)
+  console.log(noonAM.format("hh"))
+}))
+
+$(oneHourListener.on('click','.btn',function(event){
+  var onePM = dayjs().set('hour', 13)
+  console.log(onePM.format("hh"))
+}))
+
+$(twoHourListener.on('click','.btn',function(event){
+  var twoPM = dayjs().set('hour', 14)
+  console.log(twoPM.format("hh"))
+}))
+
+$(threeHourListener.on('click','.btn',function(event){
+  var threePM = dayjs().set('hour', 15)
+  console.log(threePM.format("hh"))
+}))
+
+$(fourHourListener.on('click','.btn',function(event){
+  var fourPM = dayjs().set('hour', 16)
+  console.log(fourPM.format("hh"))
+}))
+
+$(fiveHourListener.on('click','.btn',function(event){
+  var fivePM = dayjs().set('hour', 17)
+  console.log(fivePM.format("hh"))
+}))
+
 
 past = dayjs().isBefore(dayjs(today, 'hour'))
 
