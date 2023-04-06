@@ -24,11 +24,11 @@ var today = dayjs().format("HH")
 
 var containterLister = $("#container")
 
-function pressclicked(){
-  console.log(today)
-}
 
-$(containterLister.on('click','.btn',pressclicked ))
+$(containterLister.on('click','.btn',function(event){
+  alert(event.target.id)
+
+}))
 
 past = dayjs().isBefore(dayjs(today, 'hour'))
 
@@ -48,7 +48,7 @@ console.log(today)
 
 var nineAM = dayjs().set('hour', 9)
 
-console.log(nineAM.$H)
+
 // hour9 =  today.set('hour',9)
 
 // console.log(hour9)
