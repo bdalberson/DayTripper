@@ -26,9 +26,9 @@ var containterLister = $("#container")
 
 
 $(containterLister.on('click','.btn',function(event){
-  alert(event.target.id)
+  if ($(event.target.id == "hour9")){
   console.log(event.target.id)
-
+  }
 }))
 
 past = dayjs().isBefore(dayjs(today, 'hour'))
