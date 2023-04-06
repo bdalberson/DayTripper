@@ -20,7 +20,7 @@ $(function () {
   // TODO: Add code to display the current date in the header of the page.
 });
 
-var today = dayjs();
+var today = dayjs().format("HH")
 
 var containterLister = $("#container")
 
@@ -42,6 +42,17 @@ console.log(present)
 future = dayjs().isAfter(today, 'hour')
 
 console.log(future)
+
+
+console.log(today)
+
+var nineAM = dayjs().set('hour', 9)
+
+console.log(nineAM.$H)
+// hour9 =  today.set('hour',9)
+
+// console.log(hour9)
+
 // const buttons = document.querySelectorAll('btn');
 
 // buttons.addEventListener("click",function() {
