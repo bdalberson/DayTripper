@@ -20,15 +20,24 @@ $(function () {
   // TODO: Add code to display the current date in the header of the page.
 });
 
-var today = dayjs().format("HH")
+var today = dayjs().format('MMM D, YYYY')
 
-var containterLister = $("#container")
+document.title = today
+var nineHourListener = $("#hour-9")
+var tenHourListener = $("#hour-10")
+var elevenHourListener = $("#hour-11")
+var noonHourListener = $("#hour-12")
+var oneHourListener = $("#hour-1")
+var twoHourListener = $("#hour-2")
+var threeHourListener = $("#hour-3")
+var fourHourListener = $("#hour-4")
+var fiveHourListener = $("#hour-5")
 
 
-$(containterLister.on('click','.btn',function(event){
-  if ($(event.target.id == "hour9")){
-  console.log(event.target.id)
-  }
+
+
+$(nineHourListener.on('click','.btn',function(event){
+  console.log("9")
 }))
 
 past = dayjs().isBefore(dayjs(today, 'hour'))
