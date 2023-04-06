@@ -27,6 +27,7 @@ var containterLister = $("#container")
 
 $(containterLister.on('click','.btn',function(event){
   alert(event.target.id)
+  console.log(event.target.id)
 
 }))
 
