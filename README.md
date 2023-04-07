@@ -12,7 +12,7 @@
 
 [Visit the Deployed Site](https://bdalberson.github.io/Quiz-test/)
 
-![plot](./assets/Screen%20Shot%202023-04-02%20at%205.04.45%20PM.png)
+![plot](./Assets/05-third-party-apis-homework-demo.gif)
 
 ## Code Refactor Example
 
