@@ -1,14 +1,4 @@
 
-$(function () {
-  
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
-});
-
 var today = dayjs().format('MMM D, YYYY')
 var currentHour = dayjs().format("HH")
 
@@ -31,31 +21,31 @@ var fiveHourListener = $("#hour-5")
 $(nineHourListener.on('click','.btn',function(event){
   var nineAM = dayjs().set('hour', 09).format("HH")
   if (currentHour == nineAM){
-    document.getElementById("hour-9").classList.add('present');
+    document.getElementById("divhour-9").classList.add('present');
 
   }
   else if (currentHour > nineAM){
     console.log("past");
-    document.getElementById("hour-9").classList.add('past');
+    document.getElementById("divhour-9").classList.add('past');
   }
   else{
     console.log("future");
-    document.getElementById("hour-9").classList.add('future')
+    document.getElementById("divhour-9").classList.add('future')
   }
 }))
 
 $(tenHourListener.on('click','.btn',function(event){
   var tenAM = dayjs().set('hour', 10).format("HH")
   if (currentHour == tenAM){
-    document.getElementById("hour-10").classList.add('present');
+    document.getElementById("divhour-10").classList.add('present');
   }
   else if (currentHour > tenAM){
     console.log("past");
-    document.getElementById("hour-10").classList.add('past');
+    document.getElementById("divhour-10").classList.add('past');
   }
   else{
     console.log("future");
-    document.getElementById("#hour-10").classList.add('future');
+    document.getElementById("#divhour-10").classList.add('future');
   }
 }))
 
