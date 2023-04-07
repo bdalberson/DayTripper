@@ -4,7 +4,7 @@ var currentHour = dayjs().format("HH")   //stlyes the time in military time for 
 
 
 
-document.title = today   //gets the time
+document.title = today   //sets title to time
 
 //button grabbers for each item below
 var nineHourListener = $("#hour-9")
