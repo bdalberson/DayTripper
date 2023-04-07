@@ -107,7 +107,7 @@ $(oneHourListener.on('click','.btn',function(event){
 
 $(twoHourListener.on('click','.btn',function(event){
   var twoPM = dayjs().set('hour', 14).format("HH")
-  if (currentHour == onePM){
+  if (currentHour == twoPM){
     document.getElementById("hour-2").classList.add('present');
   }
   else if (currentHour > twoPM){
