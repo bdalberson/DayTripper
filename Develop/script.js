@@ -1,10 +1,12 @@
 
-var today = dayjs().format('MMM D, YYYY')
-var currentHour = dayjs().format("HH")
+var today = dayjs().format('MMM D, YYYY')  //gets the time
+var currentHour = dayjs().format("HH")   //stlyes the time in military time for use
 
 
 
-document.title = today
+document.title = today   //gets the time
+
+//button grabbers for each item below
 var nineHourListener = $("#hour-9")
 var tenHourListener = $("#hour-10")
 var elevenHourListener = $("#hour-11")
@@ -18,23 +20,23 @@ var fiveHourListener = $("#hour-5")
 
 
 
-$(nineHourListener.on('click','.btn',function(event){
-  var nineAM = dayjs().set('hour', 09).format("HH")
-  if (currentHour == nineAM){
+$(nineHourListener.on('click','.btn',function(event){ //click listener
+  var nineAM = dayjs().set('hour', 09).format("HH") //sets the timer variable to the time clicked.  
+  if (currentHour == nineAM){ //sets the class to present if its the present
     document.getElementById("divhour-9").classList.add('present');
 
   }
-  else if (currentHour > nineAM){
+  else if (currentHour > nineAM){ //sets the class to past if its the past
     console.log("past");
     document.getElementById("divhour-9").classList.add('past');
   }
   else{
-    console.log("future");
+    console.log("future"); //sets the class to future  if its not current time or the past
     document.getElementById("divhour-9").classList.add('future')
   }
 }))
 
-$(tenHourListener.on('click','.btn',function(event){
+$(tenHourListener.on('click','.btn',function(event){ //same as above
   var tenAM = dayjs().set('hour', 10).format("HH")
   if (currentHour == tenAM){
     document.getElementById("divhour-10").classList.add('present');
