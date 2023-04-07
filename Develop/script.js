@@ -1,17 +1,6 @@
 
 $(function () {
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
-  //
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
+  
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
@@ -41,49 +30,75 @@ var fiveHourListener = $("#hour-5")
 
 $(nineHourListener.on('click','.btn',function(event){
   var nineAM = dayjs().set('hour', 09).format("HH")
-  if (currentHour > nineAM){
+  if (currentHour == nineAM){
+    document.getElementById("hour-9").classList.add('present');
+
+  }
+  else if (currentHour > nineAM){
     console.log("past");
-    document.getElementById("hour-9").classList.add('future');
+    document.getElementById("hour-9").classList.add('past');
   }
   else{
     console.log("future");
+    document.getElementById("hour-9").classList.add('future')
   }
 }))
 
 $(tenHourListener.on('click','.btn',function(event){
   var tenAM = dayjs().set('hour', 10).format("HH")
-  if (currentHour > tenAM){
+  if (currentHour == tenAM){
+    document.getElementById("hour-10").classList.add('present');
+  }
+  else if (currentHour > tenAM){
     console.log("past");
+    document.getElementById("hour-10").classList.add('past');
   }
   else{
     console.log("future");
+    document.getElementById("#hour-10").classList.add('future');
   }
 }))
 
 $(elevenHourListener.on('click','.btn',function(event){
   var elevenAM = dayjs().set('hour', 11).format("HH")
-  if (currentHour > elevenAM){
+  if (currentHour == elevenAM){
+    document.getElementById("hour-11").classList.add('present');
+  }
+  else if (currentHour > elevenAM){
     console.log("past");
+    document.getElementById("hour-11").classList.add('past');
   }
   else{
     console.log("future");
+    document.getElementById("hour-11").classList.add('future');
+
   }
 }))
 
 $(noonHourListener.on('click','.btn',function(event){
   var noonPM = dayjs().set('hour', 12).format("HH")
   if (currentHour > noonPM){
+    document.getElementById("hour-12").classList.add('present');
+  }
+  else if (currentHour > noonPM){
     console.log("past");
+    document.getElementById("hour-12").classList.add('past');
   }
   else{
     console.log("future");
+    document.getElementById("hour-12").classList.add('future');
+
   }
 }))
 
 $(oneHourListener.on('click','.btn',function(event){
   var onePM = dayjs().set('hour', 13).format("HH")
-  if (currentHour > onePM){
+  if (currentHour == onePM){
+    document.getElementById("hour-1").classList.add('present');
+  }
+  else if (currentHour > onePM){
     console.log("past");
+    document.getElementById("hour-1").classList.add('past');
   }
   else{
     console.log("future");
@@ -92,8 +107,12 @@ $(oneHourListener.on('click','.btn',function(event){
 
 $(twoHourListener.on('click','.btn',function(event){
   var twoPM = dayjs().set('hour', 14).format("HH")
-  if (currentHour > twoPM){
+  if (currentHour == onePM){
+    document.getElementById("hour-2").classList.add('present');
+  }
+  else if (currentHour > twoPM){
     console.log("past");
+    document.getElementById("hour-2").classList.add('past');
   }
   else{
     console.log("future");
@@ -103,7 +122,11 @@ $(twoHourListener.on('click','.btn',function(event){
 $(threeHourListener.on('click','.btn',function(event){
   var threePM = dayjs().set('hour', 15).format("HH")
   if (currentHour > threePM){
+    document.getElementById("hour-3").classList.add('present');
+  }
+  else if (currentHour > threePM){
     console.log("past");
+    document.getElementById("hour-3").classList.add('past');
   }
   else{
     console.log("future");
@@ -112,21 +135,33 @@ $(threeHourListener.on('click','.btn',function(event){
 
 $(fourHourListener.on('click','.btn',function(event){
   var fourPM = dayjs().set('hour', 15).format("HH")
-  if (currentHour > fourPM){
+  if (currentHour == fourPM){
+    document.getElementById("hour-4").classList.add('present');
+
+  }
+  else if (currentHour > fourPM){
     console.log("past");
+    document.getElementById("hour-4").classList.add('past');
   }
   else{
     console.log("future");
+    document.getElementById("hour-4").classList.add('future');
   }
 }))
 
 $(fiveHourListener.on('click','.btn',function(event){
   var fivePM = dayjs().set('hour', 17).format("HH")
-  if (currentHour > fivePM){
+  if (currentHour == fivePM){
+    console.log("present");
+    document.getElementById("hour-5").classList.add('present')
+  }
+  else if (currentHour > fivePM){
     console.log("past");
+    document.getElementById("hour-5").classList.add('past');
   }
   else{
     console.log("future");
+    document.getElementById("hour-5").classList.add('future');
   }
 }))
 
